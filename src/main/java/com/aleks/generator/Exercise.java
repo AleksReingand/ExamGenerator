@@ -11,9 +11,14 @@ import lombok.NoArgsConstructor;
 @Builder
 public class Exercise
 {
-  private int x;
-  private int y;
-  private String result;
+  private double x;
+  private double y;
+  private double result;
   private Operation operand;
 
+  @Override
+  public String toString()
+  {
+    return x + " " + operand.getOperand() + " " + y + " = " + result;
+  }
 }
